@@ -1,0 +1,22 @@
+CREATE DATABASE cataDB;
+USE cataDB;
+
+CREATE TABLE Users (
+  UserID int NOT NULL AUTO_INCREMENT,
+  UserName VARCHAR(255) NOT NULL,
+  Email VARCHAR(255) NOT NULL,
+  Password CHAR(60) NOT NULL,
+  PRIMARY KEY (Userid)
+);
+
+CREATE TABLE Campaigns (
+  CampaignID INT NOT NULL AUTO_INCREMENT,
+  UserID INT,
+  PRIMARY KEY (CampaignID)
+  FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE MundaneItems (
+  MundaneItemID INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (MundaneItemID)
+);

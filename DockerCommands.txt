@@ -1,0 +1,9 @@
+Website
+
+Docker build -t "website" .
+Docker run -p 80:80 --name cataweb --link catadb:catadb website
+
+Database
+docker pull MySQL:latest
+Docker build -t "mysql" .
+docker run --name catadb -e MYSQL_ROOT_PASSWORD=yourpassword -p 3306:3306 -v /D/Git/Catacombs/Databse/config:/etc/MySQL/conf.d -v catadb-data:/var/lib/MySQL -d mysql

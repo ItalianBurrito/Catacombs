@@ -1,4 +1,4 @@
-//Signin page. Not account creation.
+//Game master view.
 
 <!DOCTYPE html>
 
@@ -12,14 +12,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Catacombs Login</title>
+    <title>Your campaign name here.</title>
   </head>
   <body>
     <main>
       <nav>
       </nav>
     </main>
-    <h1>This is the Login Page</h1>
-    <h2 ahref="campaigns.php">Goto campaigns</h2>
+    <h1>This is the game master view</h1>
   </body>
 </html>

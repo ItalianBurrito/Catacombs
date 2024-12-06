@@ -1,7 +1,8 @@
-const staticCCSheet = "catacombs-char-sheet-v0.1"
+const staticCCSheet = "catacombs-char-sheet-v0.1.1"
 const assets = [
   "/",
   "index.html",
+  "login.php",
   "campaigns.php",
   "gameMasterView.php",
   "playerView.php",

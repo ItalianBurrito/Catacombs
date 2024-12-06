@@ -19,6 +19,7 @@
       <nav>
       </nav>
         <h1>This is your character. Don't die.</h1>
+        <a href='campaigns.php'>Back to campaign select</a>
     </main>
     <script src="js/app.js"></script>
   </body>

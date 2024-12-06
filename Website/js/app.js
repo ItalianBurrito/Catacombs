@@ -7,11 +7,24 @@ if("serviceWorker" in navigator){
   })
 }
 
+if(isInStandaloneMode()){
+  let refreshButton = document.querySelector("#refresh-bar");
+  refreshButton.style.display ='block';
+  alert("Here");
+}else{
+  let refreshButton = document.querySelector("#refresh-bar");
+  refreshButton.style.display ='none';
+}
+
 function refreshPWA(){
   let refreshButton = document.querySelector("#refresh-bar");
   if(refreshButton){
     refreshButton.style.display = 'none';
   }
+}
+
+function isInStandaloneMode(){
+  return (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
 }
 // const container = document.querySelector(".container")
 // const spells = [

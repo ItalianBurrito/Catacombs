@@ -5,7 +5,8 @@
 <html lang ="en">
   <head>
     <link rel="manifest" href="manifest.json" />
-
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
     <meta name="theme-color" content="#db4938" />
 
@@ -20,8 +21,7 @@
       </nav>
 
         <div id="refresh-bar" className="refresh_bar" display="">
-                 <Button id="refresh_btn" key="install" aria-label="close" color="inherit"
-                         className="refresh_bar_class" onClick="refreshPWA()" border='0'>
+                 <Button id="refresh_btn" className="refresh_bar_class" onClick="refreshPWA()">
                      New Content available. Press here to refresh!
                  </Button>
          </div>

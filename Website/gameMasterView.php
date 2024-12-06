@@ -1,4 +1,4 @@
-//Game master view.
+<!--Game master view.-->
 
 <!DOCTYPE html>
 
@@ -18,7 +18,8 @@
     <main>
       <nav>
       </nav>
+          <h1>This is the game master view</h1>
     </main>
-    <h1>This is the game master view</h1>
+    <script src="js/app.js"></script>
   </body>
 </html>

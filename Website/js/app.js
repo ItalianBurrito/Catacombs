@@ -7,31 +7,37 @@ if("serviceWorker" in navigator){
   })
 }
 
-const container = document.querySelector(".container")
-const spells = [
-  {name: "Magic Missile", image: "images/shiv.png"},
-  {name: "Mage Armour", image: "images/shiv.png"},
-  {name: "Shield", image: "images/shiv.png"},
-  {name: "Great Thunderclap", image: "images/shiv.png"},
-  {name: "Fireball", image: "images/shiv.png"},
-  {name: "Arcane Lock", image: "images/shiv.png"},
-  {name: "Black Tentacles", image: "images/shiv.png"},
-  {name: "Secure Shelter", image: "images/shiv.png"},
-  {name: "Disobedience", image: "images/shiv.png"},
-]
-const showSpells = () => {
-  let output = ""
-  spells.forEach(
-  ({name, image}) =>
-    (output += `
-              <div class="card">
-                <img class="card--avatar" src=${image} />
-                <h1 class="card--title">${name}</h1>
-                <a class="card--link" href="#">Effect</a>
-              </div>
-            `)
-  )
-  container.innerHTML = output
+function refreshPWA(){
+  let refreshButton = document.querySelector("#refresh-bar");
+  if(refreshButton){
+    refreshButton.style.display = 'none';
+  }
 }
+// const container = document.querySelector(".container")
+// const spells = [
+//  {name: "Magic Missile", image: "images/shiv.png"},
+//  {name: "Mage Armour", image: "images/shiv.png"},
+//  {name: "Shield", image: "images/shiv.png"},
+//  {name: "Great Thunderclap", image: "images/shiv.png"},
+//  {name: "Fireball", image: "images/shiv.png"},
+//  {name: "Arcane Lock", image: "images/shiv.png"},
+//  {name: "Black Tentacles", image: "images/shiv.png"},
+//  {name: "Secure Shelter", image: "images/shiv.png"},
+//  {name: "Disobedience", image: "images/shiv.png"},
+// ]
+// const showSpells = () => {
+//  let output = ""
+//  spells.forEach(
+//  ({name, image}) =>
+//    (output += `
+//               <div class="card">
+//                 <img class="card--avatar" src=${image} />
+//                 <h1 class="card--title">${name}</h1>
+//                 <a class="card--link" href="#">Effect</a>
+//               </div>
+//             `)
+//   )
+//   container.innerHTML = output
+// }
 
-document.addEventListener("DOMContentLoaded", showSpells)
+//document.addEventListener("DOMContentLoaded", showSpells)

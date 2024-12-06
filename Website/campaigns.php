@@ -1,4 +1,4 @@
-//Campaign selection. Ones you play in and ones you DM in. Snapshot of character: Name, level, hp.
+<!--Campaign selection. Ones you play in and ones you DM in. Snapshot of character: Name, level, hp.-->
 
 <!DOCTYPE html>
 
@@ -18,9 +18,18 @@
     <main>
       <nav>
       </nav>
+
+      <div id="refresh-bar" className="refresh_bar" display="">
+               <Button id="refresh_btn" key="install" aria-label="close" color="inherit"
+                       className="refresh_bar_class" onClick="refreshPWA()" border='0'>
+                   New Content available. Press here to refresh!
+               </Button>
+       </div>
+
+      <h1>This is the campaign selection page.</h1>
+      <h2> <a href="gameMasterView.php">Goto MY campaign</a></h2>
+      <h2> <a href="playerView.php">Goto my CHARACTER</a></h2>
     </main>
-    <h1>This is the campaign selection page.</h1>
-    <h2 ahref="gameMasterView.php">Goto MY campaign</h2>
-    <h2 ahref="playerView.php">Goto my CHARACTER</h2>
+    <script src="js/app.js"></script>
   </body>
 </html>

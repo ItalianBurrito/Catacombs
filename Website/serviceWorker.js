@@ -1,6 +1,10 @@
 const staticCCSheet = "catacombs-char-sheet-v0.1"
 const assets = [
   "/",
+  "index.html",
+  "campaigns.php",
+  "gameMasterView.php",
+  "playerView.php",
   "/css/style.css",
   "/js/app.js",
   "/images/shiv.png",

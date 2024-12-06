@@ -1,4 +1,4 @@
-//This is the player view
+<!--This is the player view-->
 
 <!DOCTYPE html>
 
@@ -18,7 +18,8 @@
     <main>
       <nav>
       </nav>
+        <h1>This is your character. Don't die.</h1>
     </main>
-    <h1>This is your character. Don't die.</h1>
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 {
-"name": "Catacombs Character Sheet",
-"short_name": "CCSheet",
+"name": "Catacombs Tabletop Organizer",
+"short_name": "Catacombs",
+"version": "0.1.1",
 "start_url": "index.html",
 "display": "standalone",
 "background_color": "#fdfdfd",

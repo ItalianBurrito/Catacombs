@@ -18,6 +18,14 @@
     <main>
       <nav>
       </nav>
+
+      <div id="refresh-bar" className="refresh_bar" display="">
+               <Button id="refresh_btn" key="install" aria-label="close" color="inherit"
+                       className="refresh_bar_class" onClick="refreshPWA()" border='0'>
+                   New Content available. Press here to refresh!
+               </Button>
+       </div>
+       
         <h1>This is your character. Don't die.</h1>
         <a href='campaigns.php'>Back to campaign select</a>
     </main>

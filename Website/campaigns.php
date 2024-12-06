@@ -30,6 +30,8 @@
       <h2> <a href="gameMasterView.php">Goto MY campaign</a></h2>
       <h2> <a href="playerView.php">Goto my CHARACTER</a></h2>
 
+<!-- Add support for mobile. Current does not work. It works but ew. -->
+
       <div class="dropdown">
         <button class ="dropbtn">Campaign Select</button>
         <div class='dropdown-content'>
@@ -48,7 +50,7 @@
           <a href="#">Grunt</a>
           <a href="#">Dominic</a>
         </div>
-      </div>
+      </div><br>
       <a href="index.html">Login page</a>
     </main>
     <script src="js/app.js"></script>

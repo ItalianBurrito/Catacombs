@@ -1,4 +1,4 @@
-const staticCCSheet = "catacombs-char-sheet-v0.1.1"
+const staticCCSheet = ['catacombs-char-sheet-v0.1.3'];
 const assets = [
   "/",
   "index.html",
@@ -8,7 +8,7 @@ const assets = [
   "playerView.php",
   "/css/style.css",
   "/js/app.js"
-]
+];
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
@@ -17,6 +17,20 @@ self.addEventListener("install", installEvent => {
     })
   )
 })
+
+self.addEventListener('activate', event =>{
+  event.waitUntil(
+    caches.keys().then(keys => Promise.all(
+      keys.map(key => {
+        if (!staticCCSheet.includes(key)){
+          return caches.delete(key);
+        }
+      })
+    )).then(() =>{
+      console.log('New worker ready');
+    })
+  );
+});
 
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(

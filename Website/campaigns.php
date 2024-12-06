@@ -29,6 +29,27 @@
       <h1>This is the campaign selection page.</h1>
       <h2> <a href="gameMasterView.php">Goto MY campaign</a></h2>
       <h2> <a href="playerView.php">Goto my CHARACTER</a></h2>
+
+      <div class="dropdown">
+        <button class ="dropbtn">Campaign Select</button>
+        <div class='dropdown-content'>
+          <a href="#">The Depths</a>
+          <a href="#">Cacophony in the Dark</a>
+          <a href="#">Ashes of Eden</a>
+          <a href="#">Echos in the Abyss</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class ="dropbtn">Character Select</button>
+        <div class='dropdown-content'>
+          <a href="#">Aram</a>
+          <a href="#">Arborous</a>
+          <a href="#">Grunt</a>
+          <a href="#">Dominic</a>
+        </div>
+      </div>
+
     </main>
     <script src="js/app.js"></script>
   </body>

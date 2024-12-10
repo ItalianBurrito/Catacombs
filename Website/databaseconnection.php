@@ -1,11 +1,11 @@
 <?php
 $servername = "catadb";
-$username = "root";
-$password = "XFilesHiddenServer";
-$dbname = "cataDB2";
+$DB_USER = "root";
+$DB_PASSWORD = "XFilesHiddenServer";
+$dbname = "cataDB";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $DB_USER, $DB_PASSWORD, $dbname);
 
 // Check connection
 if (!$conn) {

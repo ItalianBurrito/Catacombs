@@ -1,11 +1,11 @@
 Website
 
 Docker build -t "website" .
-Docker run -p 80:80 --name cataweb --link catadb:catadb website
+Docker run -p 80:80 --name cataweb --link catadb:catadb -d website
 
 Database
 Inside database DIR
 docker build -t "db" .
-docker run --name catadb -e MYSQL_ROOT_PASSWORD=yourpassword -p 3306:3306 -v catadb-data:/var/lib/MySQL -d MySQL
+docker run --name catadb -e MYSQL_ROOT_PASSWORD=yourpassword -p 3306:3306 -v catadb-data:/var/lib/MySQL -d db
 
 docker cp Database/schema.sql catadb:/schema.sql

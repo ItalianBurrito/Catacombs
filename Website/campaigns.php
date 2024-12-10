@@ -1,8 +1,7 @@
-<!--Campaign selection. Ones you play in and ones you DM in. Snapshot of character: Name, level, hp.-->
 <?php
 session_start();
 if(!isset($_SESSION['uid'])){
-  header("Location: http://localhost/index.php");
+  header("Location: /index.php");
   exit;
 }
 ?>
@@ -57,7 +56,7 @@ if(!isset($_SESSION['uid'])){
           <a href="#">Dominic</a>
         </div>
       </div><br>
-      <a href="login.php">Logout</a>
+      <a href="logout.php">Logout</a>
     </main>
     <script src="js/app.js"></script>
   </body>

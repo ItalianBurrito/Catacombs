@@ -2,59 +2,8 @@
 <?php
 session_start();
 if(isset($_SESSION['uid'])){
-  header("Location: /campaigns.php");
+  header("Location: campaigns.php");
   exit;
-}
-
-include 'databaseconnection.php';
-
-$email = $password = '';
-$email_err = $password_err = $login_err = '';
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-  if(empty(trim($_POST["email"]))){
-    $email_err = "Please enter email.";
-  }else{
-    $email = trim($_POST["email"]);
-  }
-
-  if(empty(trim($_POST["password"]))){
-    $password_err = "Please enter your password.";
-  }else{
-    $password = trim($_POST["password"]);
-  }
-
-  if(empty($email_err) && empty($password_err)){
-    $sql = "SELECT UserName, Email, Password FROM Users WHERE Email = ?";
-    if($stmt = $conn->prepare($sql)){
-      $stmt -> bind_param('s', $email);
-      if($stmt->execute()){
-        echo"service wased1";
-        $stmt->store_result();
-
-        if($stmt->num_rows ==1){
-          echo"service wased2";
-          $stmt->bind_result($username, $email, $hashed_password);
-          if($stmt->fetch()){
-            if($password == $hashed_password){
-              $_SESSION['uid'] = $username;
-              header("Location= http://localhost/campaigns.php");
-            }else{
-              $login_err = "Invalid username or password.";
-            }
-          }
-        }else{
-          $login_err = "Invalid username or password.";
-        }
-       } else {
-        echo "Oops! Something went wrong.";
-      }
-
-        $stmt->close();
-    }
-  }
-    $conn->close();
 }
 ?>
 <!DOCTYPE html>
@@ -83,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                  </Button>
          </div>
 
-      <h1>This is the Login Page Properly with update</h1>
+      <h1>This is the Login Page</h1>
 
       <h2> <a href="campaigns.php">Goto campaigns</a></h2>
       <?php
@@ -91,12 +40,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            echo '<div class="alert alert-danger">' . $login_err . '</div>';
        }
        ?>
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+      <form action="login.php" method="post">
         <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>"><br>
         <span class="invalid-feedback"><?php echo $username_err; ?></span>
 
-        <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-        <span class="invalid-feedback"><?php echo $password_err; ?></span>
+        <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"><br>
+        <span class="invalid-feedback"><?php echo $password_err; ?></span><br>
 
         <input type="submit" value='Login'>
         </form>

@@ -4,7 +4,8 @@ const assets = [
   "index.php",
   "login.php",
   "logout.php",
-  "campaigns.php",
+  "home.php",
+  "updateInfo.php"
   "gameMasterView.php",
   "playerView.php",
   "/css/style.css",

@@ -25,9 +25,9 @@
                    New Content available. Press here to refresh!
                </Button>
        </div>
-       
+
         <h1>This is your character. Don't die.</h1>
-        <a href='campaigns.php'>Back to campaign select</a>
+        <a href='home.php'>Back to campaign select</a>
     </main>
     <script src="js/app.js"></script>
   </body>

@@ -2,7 +2,7 @@
 <?php
 session_start();
 if(isset($_SESSION['uid'])){
-  header("Location: campaigns.php");
+  header("Location: home.php");
   exit;
 }
 ?>
@@ -34,7 +34,7 @@ if(isset($_SESSION['uid'])){
 
       <h1>This is the Login Page</h1>
 
-      <h2> <a href="campaigns.php">Goto campaigns</a></h2>
+      <h2> <a href="home.php">Goto campaigns</a></h2>
       <?php
        if(!empty($login_err)){
            echo '<div class="alert alert-danger">' . $login_err . '</div>';

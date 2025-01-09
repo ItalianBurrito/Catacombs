@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           if($stmt->fetch()){
             if($password == $hashed_password){
               $_SESSION['uid'] = $username;
-              header("Location: /campaigns.php");
+              header("Location: /home.php");
             }else{
               header("Location: index.php");
             }

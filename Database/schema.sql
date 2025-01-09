@@ -18,5 +18,7 @@ CREATE TABLE Campaigns (
 
 CREATE TABLE MundaneItems (
   MundaneItemID INT NOT NULL AUTO_INCREMENT,
+  ItemType VARCHAR(255) NOT NULL,
+  ItemName VARCHAR(255) NOT NULL,
   PRIMARY KEY (MundaneItemID)
 );

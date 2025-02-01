@@ -27,17 +27,22 @@
        </div>
 
        <div id="databaseForm">
-         <input type ="" name="" class="databaseInput"><br>
+         <input type ="" id="" name="" class="databaseInput"><br>
          <select id="itemType" name="itemType">
            <option value=""></option>
+           <option value="adventuringItem">Adventuring Equipment</option>
+           <option value="alchemical">Alchemical</option>
            <option value="clothing">Clothing</option>
            <option value="weapon">Weapon</option>
            <option value="magicWeapon">Magic Weapon</option>
            <option value="armour">Armour</option>
            <option value="magicArmour">Magic Armour</option>
            <option value="wonderous">Wonderous Item</option>
+           <option value="tradeGoods">Trade Goods</option>
            <option value="other">Other</option>
-         <input type="text" name="itemName" class="databaseInput"><br>
+         <input type="text" id="itemName" name="itemName" class="databaseInput"><br>
+         <input type="text" id="itemCost" name="itemCost" class="databaseInput"><br>
+         <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"></textarea>
        </div>
 
         <a href='home.php'>Back to campaign select</a>

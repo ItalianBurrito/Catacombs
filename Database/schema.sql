@@ -22,6 +22,7 @@ CREATE TABLE MundaneItems (
   ItemName VARCHAR(255) NOT NULL,
   ItemCost VARCHAR(255),
   ItemBonuses VARCHAR(255),
+  ItemAttunment VARCHAR(63),
   ItemWieght SMALLINT,
   ItemHardness TINYINT,
   ItemHitpoints TINYINT,

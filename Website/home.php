@@ -34,6 +34,7 @@ if(!isset($_SESSION['uid'])){
       <h1>This is the campaign selection page.</h1>
       <h2> <a href="gameMasterView.php">Goto MY campaign</a></h2>
       <h2> <a href="playerView.php">Goto my CHARACTER</a></h2>
+      <h2> <a href="updateInfo.php">Data Input</a></h2>
 
 <!-- Add support for mobile. Current does not work. It works but ew. -->
 

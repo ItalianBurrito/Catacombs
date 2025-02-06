@@ -27,9 +27,11 @@
        </div>
 
        <div id="databaseForm">
-         <input type ="" id="" name="" class="databaseInput"><br>
+         <p>Item Name</p>
+         <input type="text" id="itemName" name="itemName" class="databaseInput"><br>
+
+         <p>Item Type</p>
          <select id="itemType" name="itemType">
-           <option value=""></option>
            <option value="adventuringItem">Adventuring Equipment</option>
            <option value="alchemical">Alchemical</option>
            <option value="clothing">Clothing</option>
@@ -40,8 +42,42 @@
            <option value="wonderous">Wonderous Item</option>
            <option value="tradeGoods">Trade Goods</option>
            <option value="other">Other</option>
-         <input type="text" id="itemName" name="itemName" class="databaseInput"><br>
+         </select>
+
+         <select id="itemSlot" name="itemSlot">
+           <option value="notApplicable">Not Applicable</option>
+           <option value="head">Head</option>
+           <option value="eyes">Eyes</option>
+           <option value="neck">Neck</option>
+           <option value="back">Back</option>
+           <option value="torso">Torso</option>
+           <option value="armour">Armour/Robes</option>
+           <option value="arms">Arms</option>
+           <option value="hands">Hands</option>
+           <option value="finger">Finger</option>
+           <option value="belt">Belt</option>
+           <option value="boots">Boots</option>
+           <option value="noSlot">No Slot</option>
+         </select>
+
+         <p>Cost</p>
          <input type="text" id="itemCost" name="itemCost" class="databaseInput"><br>
+
+         <p>Bonuses</p>
+         <p>Number and Type. Add button to add to list</p>
+
+         <p>Weight</p>
+         <input type="number" id="itemWeight" name="itemWeight" class="databaseInput"><br>
+
+         <p>Hardness</p>
+         <input type="number" id="itemHardness" name="itemHardness" class="databaseInput"><br>
+
+         <p>Hitpoints</p>
+         <input type="number" id="itemHitpoints" name="itemHitpoints" class="databaseInput"><br>
+
+         <p>Flavour Text</p>
+
+         <p>Description</p>
          <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"></textarea>
        </div>
 

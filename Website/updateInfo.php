@@ -27,6 +27,7 @@
        </div>
 
        <div id="databaseForm">
+         <form action='/submitInfo.php'>
          <p>Item Name</p>
          <input type="text" id="itemName" name="itemName" class="databaseInput"><br>
 
@@ -42,8 +43,9 @@
            <option value="wonderous">Wonderous Item</option>
            <option value="tradeGoods">Trade Goods</option>
            <option value="other">Other</option>
-         </select>
+         </select><br>
 
+         <p>Item Slot</p>
          <select id="itemSlot" name="itemSlot">
            <option value="notApplicable">Not Applicable</option>
            <option value="head">Head</option>
@@ -78,7 +80,9 @@
          <p>Flavour Text</p>
 
          <p>Description</p>
-         <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"></textarea>
+         <textarea id="itemDescription" name="itemDescription" rows="4" cols="50"></textarea><br>
+         <input type='submit' value='Submit'>
+       </form>
        </div>
 
         <a href='home.php'>Back to campaign select</a>

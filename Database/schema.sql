@@ -11,13 +11,17 @@ CREATE TABLE Users (
 
 CREATE TABLE Campaigns (
   CampaignID INT NOT NULL AUTO_INCREMENT,
-  UserID INT,
-  PRIMARY KEY (CampaignID)
-  FOREIGN KEY (UserID) REFERENCES Users(UserID)
+  CampaignName VARCHAR(255),
+  GameMasterID INT,
+  Characters TEXT(1023),
+
+  PRIMARY KEY (CampaignID),
+  FOREIGN KEY (GameMasterID) REFERENCES Users(UserID)
 );
 
-CREATE TABLE MundaneItems (
-  MundaneItemID INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE Items (
+  ItemID INT NOT NULL AUTO_INCREMENT,
+  CampaignID INT NOT NULL,
   ItemType VARCHAR(255) NOT NULL,
   ItemName VARCHAR(255) NOT NULL,
   ItemCost VARCHAR(255),
@@ -29,5 +33,17 @@ CREATE TABLE MundaneItems (
   ItemFlavour VARCHAR(255),
   ItemDescription TEXT,
 
-  PRIMARY KEY (MundaneItemID)
+  PRIMARY KEY (ItemID)
+);
+
+CREATE TABLE Feats (
+);
+
+CREATE TABLE Skills (
+);
+
+CREATE TABLE Classes (
+);
+
+CREATE TABLE Characters (
 );
